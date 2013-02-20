@@ -16,15 +16,21 @@
 # specific language governing permissions and limitations
 # under the License.
 # 
+# Contains some contributions under the Thrift Software License.
+# Please see doc/old-thrift-license.txt in the Thrift distribution for
+# details.
 
 $:.unshift File.dirname(__FILE__)
 
+require 'thrift/bytes'
 require 'thrift/core_ext'
 require 'thrift/exceptions'
 require 'thrift/types'
 require 'thrift/processor'
 require 'thrift/client'
 require 'thrift/struct'
+require 'thrift/union'
+require 'thrift/struct_union'
 
 # serializer
 require 'thrift/serializer/serializer'
@@ -35,6 +41,7 @@ require 'thrift/protocol/base_protocol'
 require 'thrift/protocol/binary_protocol'
 require 'thrift/protocol/binary_protocol_accelerated'
 require 'thrift/protocol/compact_protocol'
+require 'thrift/protocol/json_protocol'
 
 # transport
 require 'thrift/transport/base_transport'
@@ -55,5 +62,6 @@ require 'thrift/server/nonblocking_server'
 require 'thrift/server/simple_server'
 require 'thrift/server/threaded_server'
 require 'thrift/server/thread_pool_server'
+require 'thrift/server/thin_http_server'
 
 require 'thrift/thrift_native'
